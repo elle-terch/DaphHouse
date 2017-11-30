@@ -10,6 +10,10 @@ namespace DaphHouse
     {
         static void Main(string[] args)
         {
+            //reference, object, instance of a class
+            var pet = new Dog();
+
+            Console.WriteLine("Welcome to Daph's House!");
         }
     }
 }
