@@ -8,10 +8,17 @@ namespace DaphHouse
 {
     class Pricing
     {
+        #region Statics
+        public static decimal DailyRate = 25.15;
+
+        #endregion
+
+
+
         #region Properties related to pricing
-        public decimal DailyRate { get; private set; }
         public decimal MedicationRate { get; private set; }
         public decimal PlayRate { get; private set; }
+        public decimal PlaytimeFee { get; set; }
         #endregion
     }
 }

@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dog.cs" />
-    <Compile Include="Owner.cs" />
+    <Compile Include="Kennel.cs" />
     <Compile Include="Pricing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
