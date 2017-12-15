@@ -17,7 +17,7 @@ namespace DaphHouse
         private static List<Dog> dogs = new List<Dog>();
 
         #region Methods
-        public static Visit CreateVisit(int dayIn, int dayOut, TypeOfRoom roomType = TypeOfRoom.Standard)
+        public static Visit CreateVisit(DateTime dayIn, DateTime dayOut, TypeOfRoom roomType)
         {
             var visit = new Visit
             {

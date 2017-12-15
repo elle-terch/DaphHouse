@@ -13,14 +13,13 @@ namespace DaphHouse
         Standard
     }
 
-
     class Visit
     {
 
         #region Properties related to the particular visit
         //need to figure out how to handle date/time
-        public int DayIn { get; set; }
-        public int DayOut { get; set }
+        public DateTime DayIn { get; set; }
+        public DateTime DayOut { get; set; }
         public TypeOfRoom RoomType { get; set; }
         #endregion
 

@@ -9,7 +9,7 @@ namespace DaphHouse
     class Pricing
     {
         #region Statics
-        public static decimal DailyRate = 25.15;
+        public static decimal DailyRate = 25;
 
         #endregion
 
