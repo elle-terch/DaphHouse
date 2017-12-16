@@ -21,8 +21,7 @@ namespace DaphHouse
                 Console.WriteLine("0.Exit");
                 Console.WriteLine("1. Add your dog to our database.");
                 Console.WriteLine("2. Schedule a visit.");
-                Console.WriteLine("3. See your upcoming visits.");
-                Console.WriteLine("4. See your visit history.");
+                Console.WriteLine("3. See your visits.");
 
                 Console.Write("Please select an option:");
                 var choice = Console.ReadLine();
@@ -75,9 +74,13 @@ namespace DaphHouse
                         break;
 
                     case "3":
+                        var visits = Kennel.GetAllVisits();
+                        foreach (var vis in visits)
+                        {
+                            Console.WriteLine($"Drop off: {vis.DayIn}, Pick up: {vis.DayOut}, Room type: {vis.RoomType}");
+                        }
                         break;
-                    case "4":
-                        break;
+
                     default:
                         Console.WriteLine("Invalid choice. Please try again!");
                         break;

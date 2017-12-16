@@ -49,6 +49,12 @@ namespace DaphHouse
             return dog;
         }
 
+        public static List<Visit> GetAllVisits ()
+        {
+
+            return visits;
+        }
+
     #endregion
 
 
