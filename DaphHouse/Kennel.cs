@@ -12,11 +12,10 @@ namespace DaphHouse
         //add name, address, phone number, website, etc
         #endregion
 
-
+        private static KennelModel db = new KennelModel();
         private static List<Visit> visits = new List<Visit>();
-        private static List<Dog> dogs = new List<Dog>();
 
-        #region Methods
+        #region Methods 
         public static Visit CreateVisit(DateTime dayIn, DateTime dayOut, TypeOfRoom roomType)
         {
             var visit = new Visit
@@ -44,9 +43,15 @@ namespace DaphHouse
                 OwnerPhone = ownerPhone
             };
 
-            dogs.Add(dog);
 
+            db.Dogs.Add(dog);
+            db.SaveChanges();
             return dog;
+        }
+
+        public static List<Dog> GetAllDogs(string ownerName)
+        {
+            return db.Dogs.Where(a => a.OwnerName==ownerName).ToList();
         }
 
         public static List<Visit> GetAllVisits ()

@@ -20,8 +20,9 @@ namespace DaphHouse
 
                 Console.WriteLine("0.Exit");
                 Console.WriteLine("1. Add your dog to our database.");
-                Console.WriteLine("2. Schedule a visit.");
-                Console.WriteLine("3. See your visits.");
+                Console.WriteLine("2. See all your dogs.");
+                Console.WriteLine("3. Schedule a visit.");
+                Console.WriteLine("4. See your visits.");
 
                 Console.Write("Please select an option:");
                 var choice = Console.ReadLine();
@@ -57,6 +58,16 @@ namespace DaphHouse
                         break;
 
                     case "2":
+                        Console.Write("Your Name: ");
+                        var dogOwner = Console.ReadLine();
+                        var dogs = Kennel.GetAllDogs(dogOwner);
+                        foreach (var d in dogs)
+                        {
+                            Console.WriteLine($"Dog Name:{d.DogName}, Age:{d.Age}");
+                        }
+                        break;
+
+                    case "3":
                         Console.Write("When would you like to drop off your dog?");
                         var dayIn = Convert.ToDateTime(Console.ReadLine());
                         Console.Write("When are you picking your dog up?");
@@ -73,7 +84,7 @@ namespace DaphHouse
                         Console.WriteLine($"Drop off: {visit.DayIn}, Pick up: {visit.DayOut}, Room type: {visit.RoomType}");
                         break;
 
-                    case "3":
+                    case "4":
                         var visits = Kennel.GetAllVisits();
                         foreach (var vis in visits)
                         {
