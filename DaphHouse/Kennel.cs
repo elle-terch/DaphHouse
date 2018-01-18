@@ -13,23 +13,9 @@ namespace DaphHouse
         #endregion
 
         private static KennelModel db = new KennelModel();
-        private static List<Visit> visits = new List<Visit>();
+
 
         #region Methods 
-        public static Visit CreateVisit(DateTime dayIn, DateTime dayOut, TypeOfRoom roomType)
-        {
-            var visit = new Visit
-            {
-                DayIn = dayIn,
-                DayOut = dayOut,
-                RoomType = roomType
-            };
-
-            visits.Add(visit);
-
-            return visit;
-        }
-
         public static Dog CreateDog(string dogName, TypeOfDog breed, int age, string vetName, string vetPhone, string ownerName, string ownerPhone)
         {
             var dog = new Dog
@@ -51,20 +37,34 @@ namespace DaphHouse
 
         public static List<Dog> GetAllDogs(string ownerName)
         {
-            return db.Dogs.Where(a => a.OwnerName==ownerName).ToList();
+            return db.Dogs.Where(a => a.OwnerName == ownerName).ToList();
         }
 
-        public static List<Visit> GetAllVisits ()
+        public static Visit CreateVisit(DateTime dayIn, DateTime dayOut, TypeOfRoom roomType, int dogID)
         {
+            var dog = db.Dogs.Where(v => v.DogID == dogID).FirstOrDefault();
+            var visit = new Visit
+            {
+                DayIn = dayIn,
+                DayOut = dayOut,
+                RoomType = roomType,
+                DogID = dog.DogID
+            };
 
-            return visits;
+            db.Visits.Add(visit);
+            db.SaveChanges();
+            return visit;
         }
 
-    #endregion
+
+        public static List<Visit> GetAllVisits(int dogID)
+        {
+            return db.Visits.Where(v => v.DogID == dogID).ToList();
+        }
+
+        #endregion
 
 
 
     }
 }
-
-

@@ -30,24 +30,13 @@ namespace DaphHouse
         public TypeOfDog Breed { get; set; }
         public int Age { get; set; }
         public string VetName { get; set; }
-        [StringLength(10, ErrorMessage = "Please enter numbers only, including the area code.")]
+        [StringLength(10, ErrorMessage ="Wrong amount of numbers.")]
         public string VetPhone { get; set; }
         public string OwnerName { get; set; }
         [StringLength(10, ErrorMessage = "Please enter numbers only, including the area code.")]
         public string OwnerPhone { get; set; }
         #endregion
 
-
-
-        #region Methods
-        #endregion
-
-
-        #region Constructor
-        public Dog()
-        {
-        }
-        #endregion
 
 
     }

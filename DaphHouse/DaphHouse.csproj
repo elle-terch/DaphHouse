@@ -54,6 +54,27 @@
     <Compile Include="Dog.cs" />
     <Compile Include="Kennel.cs" />
     <Compile Include="KennelModel.cs" />
+    <Compile Include="Migrations\201801180343191_Initial.cs" />
+    <Compile Include="Migrations\201801180343191_Initial.Designer.cs">
+      <DependentUpon>201801180343191_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801180347386_StringLength.cs" />
+    <Compile Include="Migrations\201801180347386_StringLength.Designer.cs">
+      <DependentUpon>201801180347386_StringLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801180349152_StringLength2.cs" />
+    <Compile Include="Migrations\201801180349152_StringLength2.Designer.cs">
+      <DependentUpon>201801180349152_StringLength2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801180542476_ForeignKeys.cs" />
+    <Compile Include="Migrations\201801180542476_ForeignKeys.Designer.cs">
+      <DependentUpon>201801180542476_ForeignKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801180601071_KeyFix.cs" />
+    <Compile Include="Migrations\201801180601071_KeyFix.Designer.cs">
+      <DependentUpon>201801180601071_KeyFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pricing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +83,23 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801180343191_Initial.resx">
+      <DependentUpon>201801180343191_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180347386_StringLength.resx">
+      <DependentUpon>201801180347386_StringLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180349152_StringLength2.resx">
+      <DependentUpon>201801180349152_StringLength2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180542476_ForeignKeys.resx">
+      <DependentUpon>201801180542476_ForeignKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180601071_KeyFix.resx">
+      <DependentUpon>201801180601071_KeyFix.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
