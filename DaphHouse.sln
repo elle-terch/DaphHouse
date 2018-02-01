@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaphHouse", "DaphHouse\DaphHouse.csproj", "{9C4727CB-B4BD-46C7-8D41-7EFC2114906F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaphHouseUI", "DaphHouseUI\DaphHouseUI.csproj", "{478662D4-C35A-498A-8548-F3093792B11F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaphHouseUI.Tests", "DaphHouseUI.Tests\DaphHouseUI.Tests.csproj", "{27773DB3-7B4F-4B48-A48A-7B7CEAF764D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9C4727CB-B4BD-46C7-8D41-7EFC2114906F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C4727CB-B4BD-46C7-8D41-7EFC2114906F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C4727CB-B4BD-46C7-8D41-7EFC2114906F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{478662D4-C35A-498A-8548-F3093792B11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{478662D4-C35A-498A-8548-F3093792B11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{478662D4-C35A-498A-8548-F3093792B11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{478662D4-C35A-498A-8548-F3093792B11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27773DB3-7B4F-4B48-A48A-7B7CEAF764D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27773DB3-7B4F-4B48-A48A-7B7CEAF764D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27773DB3-7B4F-4B48-A48A-7B7CEAF764D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27773DB3-7B4F-4B48-A48A-7B7CEAF764D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
