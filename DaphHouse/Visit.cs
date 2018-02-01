@@ -21,10 +21,13 @@ namespace DaphHouse
         #region Properties related to the particular visit
         [Key]
         public int VisitID { get; private set; }
+        [Required]
         public DateTime DayIn { get; set; }
+        [Required]
         public DateTime DayOut { get; set; }
         public TypeOfRoom RoomType { get; set; }
         [ForeignKey("Dog")]
+        [Required]
         public int DogID { get; set; }
         public virtual Dog Dog { get; set; }
         #endregion

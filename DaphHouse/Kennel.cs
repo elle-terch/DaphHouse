@@ -13,11 +13,28 @@ namespace DaphHouse
         #endregion
 
         private static KennelModel db = new KennelModel();
-
+        /// <summary>
+        /// Add a dog to database
+        /// </summary>
+        /// <param name="dogName">Name of dog</param>
+        /// <param name="breed">Dog breed</param>
+        /// <param name="age">Age of dog</param>
+        /// <param name="vetName">Name of vet</param>
+        /// <param name="vetPhone">Vet phone</param>
+        /// <param name="ownerName">Name of owner</param>
+        /// <param name="ownerPhone">Owner phone</param>
+        /// <returns>Dog information</returns>
+        /// <exception cref="ArgumentNullException" />
 
         #region Methods 
-        public static Dog CreateDog(string dogName, TypeOfDog breed, int age, string vetName, string vetPhone, string ownerName, string ownerPhone)
+        public static Dog CreateDog(string ownerName, string ownerPhone, string dogName, TypeOfDog breed, int age, string vetName, string vetPhone)
         {
+
+            if (string.IsNullOrEmpty(ownerName))
+                throw new ArgumentNullException("ownerName", "Your name is required!");
+
+
+
             var dog = new Dog
             {
                 DogName = dogName,

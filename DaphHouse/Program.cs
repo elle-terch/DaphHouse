@@ -33,28 +33,47 @@ namespace DaphHouse
                         Console.WriteLine("Thank you for visiting");
                         return;
                     case "1":
-                        Console.Write("What is your name?");
-                        var ownerName = Console.ReadLine();
-                        Console.Write("What is your phone number?");
-                        var ownerPhone = Console.ReadLine();
-                        Console.Write("What is your dog's name?");
-                        var dogName = Console.ReadLine();
-                        Console.Write("What kind of dog do you have?");
-                        var typeOfDogs = Enum.GetNames(typeof(TypeOfDog));
-                        for (var i = 0; i < typeOfDogs.Length; i++)
-                        {
-                            Console.WriteLine($"{i + 1}.{typeOfDogs[i]}");
-                        }
-                        Console.Write("Dog breed: ");
-                        var dogType = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("How old is your dog?");
-                        var age = Console.ReadLine();
-                        Console.Write("Who is your primary vet?");
-                        var vetName = Console.ReadLine();
-                        Console.Write("What is your vet's phone number?");
-                        var vetPhone = Console.ReadLine();
-                        var dog = Kennel.CreateDog(dogName, (TypeOfDog)(dogType - 1), Convert.ToInt32(age), vetName, vetPhone, ownerName, ownerPhone);
-                        Console.WriteLine($"Dog Name:{dog.DogName}, Age:{dog.Age}, Owner:{dog.OwnerName}");
+                            Console.Write("What is your name?");
+                            var ownerName = Console.ReadLine();
+                            Console.Write("What is your phone number?");
+                            var ownerPhone = Console.ReadLine();
+                            Console.Write("What is your dog's name?");
+                            var dogName = Console.ReadLine();
+                            Console.Write("What kind of dog do you have?");
+                            var typeOfDogs = Enum.GetNames(typeof(TypeOfDog));
+                            for (var i = 0; i < typeOfDogs.Length; i++)
+                            {
+                                Console.WriteLine($"{i + 1}.{typeOfDogs[i]}");
+                            }
+                            Console.Write("Dog breed: ");
+                            try
+                            {
+                                var dogType = Convert.ToInt32(Console.ReadLine());
+                                Console.Write("How old is your dog?");
+                                var age = Console.ReadLine();
+                                Console.Write("Who is your primary vet?");
+                                var vetName = Console.ReadLine();
+                                Console.Write("What is your vet's phone number?");
+                                var vetPhone = Console.ReadLine();
+                                var dog = Kennel.CreateDog(ownerName, ownerPhone, dogName, (TypeOfDog)(dogType - 1), Convert.ToInt32(age), vetName, vetPhone);
+                                Console.WriteLine($"Dog Name:{dog.DogName}, Age:{dog.Age}, Owner:{dog.OwnerName}");
+                            }
+
+                            catch(FormatException)
+                            {
+                                Console.WriteLine("Breed is invalid!");
+                            }
+
+                            catch(ArgumentNullException ax)
+                            {
+                                Console.WriteLine($"Error - {ax.ParamName}, {ax.Message}");
+                            }
+
+                            catch(Exception ex)
+                            {
+                            Console.WriteLine($"Something went wrong:{ex.Message}");
+                            }
+
                         break;
 
                     case "2":

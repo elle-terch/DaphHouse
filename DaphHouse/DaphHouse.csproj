@@ -74,6 +74,18 @@
     <Compile Include="Migrations\201801180601071_KeyFix.Designer.cs">
       <DependentUpon>201801180601071_KeyFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801291555151_ModelCleanup.cs" />
+    <Compile Include="Migrations\201801291555151_ModelCleanup.Designer.cs">
+      <DependentUpon>201801291555151_ModelCleanup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802010316224_Cleanup.cs" />
+    <Compile Include="Migrations\201802010316224_Cleanup.Designer.cs">
+      <DependentUpon>201802010316224_Cleanup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802010353188_Requirements.cs" />
+    <Compile Include="Migrations\201802010353188_Requirements.Designer.cs">
+      <DependentUpon>201802010353188_Requirements.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pricing.cs" />
     <Compile Include="Program.cs" />
@@ -99,6 +111,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801180601071_KeyFix.resx">
       <DependentUpon>201801180601071_KeyFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801291555151_ModelCleanup.resx">
+      <DependentUpon>201801291555151_ModelCleanup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802010316224_Cleanup.resx">
+      <DependentUpon>201802010316224_Cleanup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802010353188_Requirements.resx">
+      <DependentUpon>201802010353188_Requirements.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
